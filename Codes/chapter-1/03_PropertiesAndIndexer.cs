@@ -1,6 +1,5 @@
 class StudentProfile
 {
-    //Private fields (Access modifiers)
     private string name = String.Empty;
     private int age;
     private readonly string[]? subject;
@@ -67,7 +66,7 @@ public class PropsAndIndApp
 {
     public static void PropertiesAndIndexerDemo()
     {
-        // Create an instance of StudentProfile
+        // Creating an instance of StudentProfile
         string[] subjects = { "Math", "Science", "History" };
         StudentProfile student = new StudentProfile("John Doe", 20, subjects);
 
@@ -78,7 +77,6 @@ public class PropsAndIndApp
         // Access indexer
         Console.WriteLine($"Subject at index 1: {student[1]}");
 
-        // Modify indexer value
         student[1] = "Biology";
         Console.WriteLine($"Updated Subject at index 1: {student[1]}");
 

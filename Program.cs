@@ -14,7 +14,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        //01
+        // 01
         // Labs.PrintName();
 
         //02
@@ -48,15 +48,15 @@ class Program
         // StudentDisplay.RunProgram();
 
         //12
-        // LINQExample linqExample = new LINQExample();
-        // linqExample.DemonstrateLINQ();
+        // await AsyncDataHandler.Run();
 
 
         //13
-        //    await AsyncDataHandler.Run();
+        // LINQExample linqExample = new LINQExample();
+        // linqExample.DemonstrateLINQ();
 
         //14
-        FileHandling.RunProgram();
+        await Task.Run(() => FileHandling.RunProgram());
 
 
 

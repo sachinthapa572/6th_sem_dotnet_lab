@@ -39,9 +39,9 @@ namespace Collection
             StudentList studentList = new StudentList();
 
             // Step 6: Add some students to the list
-            studentList.AddStudent(new StudentModel { Name = "John Doe", Age = 20, Grade = "A" });
-            studentList.AddStudent(new StudentModel { Name = "Jane Smith", Age = 22, Grade = "B" });
-            studentList.AddStudent(new StudentModel { Name = "Alice Brown", Age = 19, Grade = "A" });
+            studentList.AddStudent(new StudentModel { Name = "Sachin Thapa", Age = 20, Grade = "A" });
+            studentList.AddStudent(new StudentModel { Name = "Ram Bahik", Age = 22, Grade = "B" });
+            studentList.AddStudent(new StudentModel { Name = "Sita kandel", Age = 19, Grade = "A" });
 
             // Step 7: Display all students
             Console.WriteLine("Student List:");

@@ -5,34 +5,20 @@ namespace AsyncDemo
 {
     class AsyncDataHandler
     {
-        public static async Task FetchDataAsync()
+        static async Task<string> GetDataAsync()
         {
-            Console.WriteLine("Fetching data...");
-
-
+            Console.WriteLine("GetDataAsync started...");
             await Task.Delay(3000);
-
-            Console.WriteLine("Data fetched successfully!");
+            Console.WriteLine("GetDataAsync finished.");
+            return "Hello from async method!";
         }
-
-
-        public static async Task ProcessDataAsync()
-        {
-            Console.WriteLine("Starting data processing...");
-
-            await FetchDataAsync();
-
-            Console.WriteLine("Data processing complete.");
-        }
-
 
         public static async Task Run()
         {
-            Console.WriteLine("Program started.");
-
-            await ProcessDataAsync();
-
-            Console.WriteLine("Program ended.");
+            Console.WriteLine("Main started.");
+            string result = await GetDataAsync();
+            Console.WriteLine($"Result: {result}");
+            Console.WriteLine("Main ended.");
         }
     }
 }

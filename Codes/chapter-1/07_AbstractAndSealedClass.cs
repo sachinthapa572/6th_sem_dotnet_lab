@@ -55,12 +55,12 @@ namespace AbstractAndSealedClass
         public static void RunProgram()
         {
             Shape circle = new Circle(5);
-            Console.WriteLine($"Circle Area: {circle.Area()}");
-            Console.WriteLine($"Circle Perimeter: {circle.Perimeter()}");
+            Console.WriteLine($"Circle Area: {circle.Area().ToString("F2")}");
+            Console.WriteLine($"Circle Perimeter: {circle.Perimeter().ToString("F2")}");
 
             Shape rectangle = new Rectangle(4, 6);
-            Console.WriteLine($"Rectangle Area: {rectangle.Area()}");
-            Console.WriteLine($"Rectangle Perimeter: {rectangle.Perimeter()}");
+            Console.WriteLine($"Rectangle Area: {rectangle.Area().ToString("F2")}");
+            Console.WriteLine($"Rectangle Perimeter: {rectangle.Perimeter().ToString("F2")}");
         }
     }
 }

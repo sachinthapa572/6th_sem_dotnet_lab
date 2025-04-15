@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Client Side State Management - GetState";
+    string name = ViewData["Name"]?.ToString() ?? string.Empty;
+    string age = ViewData["Age"]?.ToString() ?? string.Empty;
+    string faculty = ViewData["Faculty"]?.ToString() ?? string.Empty;
+    string number = ViewData["Number"]?.ToString() ?? string.Empty;
+}
+
+<h2>Client-Side State Data</h2>
+
+<p><strong>Name:</strong> @name</p>
+<p><strong>Age:</strong> @age</p>
+<p><strong>Faculty:</strong> @faculty</p>
+<p><strong>Hidden Field Incremented Value:</strong> @number</p>
+
+<form asp-action="GetState" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="num" value="@number" />
+    <button type="submit">Increment Hidden Field</button>
+</form>
+
+<form asp-action="RemoveState" method="post">
+    <button type="submit">Clear All Client State</button>
+</form>

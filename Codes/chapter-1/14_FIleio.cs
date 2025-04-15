@@ -7,7 +7,7 @@ namespace FileHandlingStreamDemo
     {
         public static void RunProgram()
         {
-            string filePath = "../public/StreamDemo.txt";
+            string filePath = "./note/file.txt";
 
             // Step 1: Write to the file using StreamWriter
             using (StreamWriter writer = new StreamWriter(filePath))

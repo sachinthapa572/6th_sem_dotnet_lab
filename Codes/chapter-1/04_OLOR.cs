@@ -1,10 +1,7 @@
 // 4.Write a program that reflects the overloading and overriding of constructor and function.
 
-
 namespace _04OLOR
 {
-
-
     class Shape
     {
         public virtual void Display()
