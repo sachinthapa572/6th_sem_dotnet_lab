@@ -1,5 +1,9 @@
 # 6th Semester .NET Lab
 
+## Purpose and Content of the Repository
+
+This repository contains practical lab exercises for the 6th semester .NET course. It includes various C# programs and ASP.NET Core applications that demonstrate different concepts and techniques covered in the course.
+
 ## How to Clone the Repository
 
 To clone the repository, use the following command:
