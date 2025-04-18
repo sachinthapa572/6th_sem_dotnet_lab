@@ -1,0 +1,6 @@
+@using (Html.BeginForm("EnterText", "XssDemo", FormMethod.Post))
+{
+    <label>Enter Message:</label>
+    <input type="text" name="userInput" />
+    <button type="submit">Send</button>
+}

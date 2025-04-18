@@ -1,93 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>User Registration (jQuery Validation)</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        .error {
-            color: red;
-            font-size: 0.9em;
-            margin-left: 10px;
-        }
-
-        input {
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .input-error {
-            border: 1px solid red;
-        }
-    </style>
-</head>
 
 <body>
+    <form id="registerForm">
+        <label>Name:</label>
+        <input type="text" id="name" />
+        <span id="nameError" style="color:red"></span><br />
 
-    <h2>User Registration (jQuery Validation)</h2>
+        <label>Email:</label>
+        <input type="text" id="email" />
+        <span id="emailError" style="color:red"></span><br />
 
-    <form id="userForm" method="post" novalidate>
-        <div>
-            <label>Name:</label>
-            <input type="text" name="Name" id="Name" />
-            <span class="error" id="nameError"></span>
-        </div>
-
-        <div>
-            <label>Email:</label>
-            <input type="email" name="Email" id="Email" />
-            <span class="error" id="emailError"></span>
-        </div>
-
-        <div>
-            <label>Age:</label>
-            <input type="number" name="Age" id="Age" />
-            <span class="error" id="ageError"></span>
-        </div>
-
-        <button type="submit">Submit</button>
+        <button type="submit">Register</button>
     </form>
 
     <script>
-        $('#userForm').on('submit', function (e) {
-            $('.error').text('');
-            $('input').removeClass('input-error');
+        $('#registerForm').submit(function (e) {
+            e.preventDefault();
 
-            let valid = true;
+            var isValid = true;
+            var name = $('#name').val().trim();
+            var email = $('#email').val().trim();
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            const name = $('#Name').val().trim();
-            const email = $('#Email').val().trim();
-            const age = $('#Age').val().trim();
-            const ageNum = Number(age);
+            $('#nameError').text('');
+            $('#emailError').text('');
 
             if (name === '') {
                 $('#nameError').text('Name is required.');
-                $('#Name').addClass('input-error');
-                valid = false;
+                isValid = false;
             }
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (email === '') {
-                $('#emailError').text('Email is required.');
-                $('#Email').addClass('input-error');
-                valid = false;
-            } else if (!emailRegex.test(email)) {
-                $('#emailError').text('Enter a valid email.');
-                $('#Email').addClass('input-error');
-                valid = false;
+            if (!emailPattern.test(email)) {
+                $('#emailError').text('Valid email is required.');
+                isValid = false;
             }
 
-            if (age === '' || isNaN(ageNum) || ageNum < 18 || ageNum > 99) {
-                $('#ageError').text('Age must be between 18 and 99.');
-                $('#Age').addClass('input-error');
-                valid = false;
+            if (isValid) {
+                alert("Form submitted successfully!");
             }
-
-            if (!valid) e.preventDefault();
         });
     </script>
-
 </body>
 
-</html>
