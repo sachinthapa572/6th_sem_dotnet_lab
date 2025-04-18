@@ -33,6 +33,7 @@
 21. WAP to show the prevention of the Cross-Site Scripting (XSS) in ASP.NET Core MVC.
 22. WAP to show the prevention of the Cross-Site Request Forgery (CSRF) in ASP.NET Core MVC using AntiForgeryToken.
 23. Demonstrate the Client-side validation in ASP.NET Core MVC .
+24. Write a program to showcase the Dependency Injection . 
 
 <!-- 21. Write a program to demonstrate the use of the ViewBag, ViewData, and TempData in ASP.NET Core MVC. -->
 
